@@ -40,9 +40,9 @@ const Footer = () => {
             <FaLinkedin />
           </a>
         </div>
-        <a href='https://telegram.me/yourusername' className='footer-message'>
+        {/* <a href='https://telegram.me/yourusername' className='footer-message'>
           Send us a message
-        </a>
+        </a> */}
       </div>
     </footer>
   );

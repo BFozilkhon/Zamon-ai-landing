@@ -24,9 +24,9 @@
 
 .posts-cards {
   display: flex;
-  align-items: center;
   gap: 40px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .posts-btn {
@@ -41,7 +41,34 @@
   color: var(--white-txt-color);
   cursor: pointer;
   transform: scale(1);
+  position: relative;
+  overflow: hidden;
   margin-top: 60px;
+}
+
+.posts-btn::before,
+.posts-btn::after {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: #ae310b;
+  content: '';
+  transition: width 1s;
+  z-index: -1;
+}
+
+.posts-btn::before {
+  left: 0;
+}
+
+.posts-btn::after {
+  right: 0;
+}
+
+.posts-btn:hover::before,
+.posts-btn:hover::after {
+  width: 100%;
 }
 
 .posts-btn:active {

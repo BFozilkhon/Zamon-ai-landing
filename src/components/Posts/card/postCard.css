@@ -5,6 +5,8 @@
   border: 1px solid var(--secondary-color);
   background: var(--card-color);
   transition: 0.3s all;
+  display: flex;
+  flex-direction: column;
 }
 
 .posts-card:hover {
@@ -49,6 +51,9 @@
   justify-content: space-between;
   margin-top: 20px;
 }
+.posts-bottom-wrapper {
+  margin-top: auto;
+}
 
 .posts-card-btn-flex {
   display: flex;
@@ -68,6 +73,33 @@
   color: var(--white-txt-color);
   cursor: pointer;
   transform: scale(1);
+  position: relative;
+  overflow: hidden;
+}
+
+.posts-card-btn::before,
+.posts-card-btn::after {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: var(--secondary-color);
+  content: '';
+  transition: width 0.5s;
+  z-index: -1;
+}
+
+.posts-card-btn::before {
+  left: 0;
+}
+
+.posts-card-btn::after {
+  right: 0;
+}
+
+.posts-card-btn:hover::before,
+.posts-card-btn:hover::after {
+  width: 100%;
 }
 
 .posts-card-btn:active {

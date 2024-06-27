@@ -2,28 +2,29 @@ import React from 'react';
 
 import './postCard.css';
 
-const PostCard = ({ img, animate }) => {
+const PostCard = ({ data, index }) => {
   return (
-    <div data-aos={animate} className='posts-card'>
-      <img className='posts-card-img' src={img} alt='posts-card-img1' />
+    <div
+      data-aos={index % 2 == 0 ? 'fade-left' : 'fade-right'}
+      className='posts-card'
+    >
+      <img className='posts-card-img' src={data?.img} alt='posts-card-img1' />
       <div className='posts-detail-flex'>
-        <p className='posts-card-prompt'>PODCAST</p>
-        <p className='posts-card-date-mobile'>Sep 14, 2021</p>
+        <p className='posts-card-prompt'>{data?.type}</p>
+        <p className='posts-card-date-mobile'>{data?.date}</p>
       </div>
-      <h3 className='posts-card-title'>Setup your own podcast</h3>
+      <h3 className='posts-card-title'>{data?.title}</h3>
 
-      <p className='posts-card-descr'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimvel
-        iam, quis nostrud exercitation ullamco laboris...
-      </p>
-      <hr className='posts-card-line' />
-      <div className='posts-card-flex'>
-        <div className='posts-card-btn-flex'>
-          <button className='posts-card-btn'>More...</button>
-          <button className='posts-card-btn'>Share</button>
+      <p className='posts-card-descr'>{data?.description}</p>
+      <div className='posts-bottom-wrapper'>
+        <hr className='posts-card-line' />
+        <div className='posts-card-flex'>
+          <div className='posts-card-btn-flex'>
+            <button className='posts-card-btn'>More...</button>
+            <button className='posts-card-btn'>Share</button>
+          </div>
+          <p className='posts-card-date-laptop'>{data?.date}</p>
         </div>
-        <p className='posts-card-date-laptop'>Sep 14, 2021</p>
       </div>
     </div>
   );

@@ -14,6 +14,7 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import img1 from '../../assets/images/team.png';
 
 import './style.css';
+import teamData from '../../assets/fake_data/team_data';
 
 const teamSlider = {
   navigation: true,
@@ -66,76 +67,26 @@ const Team = () => {
         modules={[Navigation, Autoplay]}
         className='team-swiper'
       >
-        <SwiperSlide className='team-swiper-slide'>
-          {/* first card */}
-          <div className='team-card'>
-            <img className='team-img' src={img1} alt='team-img1' />
-            <h3 className='team-name'>Fozilkhon Buzrukxojayev</h3>
-            <p className='team-position'>Frontend developer</p>
-            <div className='team-social-flex'>
-              <a className='team-social-icons' href='#'></a>
-              <a className='team-social-icons' href='#'></a>
-              <a className='team-social-icons' href='#'></a>
-            </div>
-          </div>
-          {/* end of first card */}
-        </SwiperSlide>
-        <SwiperSlide className='team-swiper-slide'>
-          {/* first card */}
-          <div className='team-card'>
-            <img className='team-img' src={img1} alt='team-img1' />
-            <h3 className='team-name'>Fozilkhon Buzrukxojayev</h3>
-            <p className='team-position'>Frontend developer</p>
-            <div className='team-social-flex'>
-              <a className='team-social-icons' href='#'></a>
-              <a className='team-social-icons' href='#'></a>
-              <a className='team-social-icons' href='#'></a>
-            </div>
-          </div>
-          {/* end of first card */}
-        </SwiperSlide>
-        <SwiperSlide className='team-swiper-slide'>
-          {/* first card */}
-          <div className='team-card'>
-            <img className='team-img' src={img1} alt='team-img1' />
-            <h3 className='team-name'>Fozilkhon Buzrukxojayev</h3>
-            <p className='team-position'>Frontend developer</p>
-            <div className='team-social-flex'>
-              <a className='team-social-icons' href='#'></a>
-              <a className='team-social-icons' href='#'></a>
-              <a className='team-social-icons' href='#'></a>
-            </div>
-          </div>
-          {/* end of first card */}
-        </SwiperSlide>
-        <SwiperSlide className='team-swiper-slide'>
-          {/* first card */}
-          <div className='team-card'>
-            <img className='team-img' src={img1} alt='team-img1' />
-            <h3 className='team-name'>Fozilkhon Buzrukxojayev</h3>
-            <p className='team-position'>Frontend developer</p>
-            <div className='team-social-flex'>
-              <a className='team-social-icons' href='#'></a>
-              <a className='team-social-icons' href='#'></a>
-              <a className='team-social-icons' href='#'></a>
-            </div>
-          </div>
-          {/* end of first card */}
-        </SwiperSlide>
-        <SwiperSlide className='team-swiper-slide'>
-          {/* first card */}
-          <div className='team-card'>
-            <img className='team-img' src={img1} alt='team-img1' />
-            <h3 className='team-name'>Fozilkhon Buzrukxojayev</h3>
-            <p className='team-position'>Frontend developer</p>
-            <div className='team-social-flex'>
-              <a className='team-social-icons' href='#'></a>
-              <a className='team-social-icons' href='#'></a>
-              <a className='team-social-icons' href='#'></a>
-            </div>
-          </div>
-          {/* end of first card */}
-        </SwiperSlide>
+        {teamData?.map((value) => {
+          return (
+            <SwiperSlide key={value.id} className='team-swiper-slide'>
+              {/* first card */}
+              <div className='team-card'>
+                <img className='team-img' src={value?.img} alt='team-img1' />
+                <h3 className='team-name'>
+                  {value?.name} {value?.surname}
+                </h3>
+                <p className='team-position'>{value?.role}</p>
+                <div className='team-social-flex'>
+                  <a className='team-social-icons' href='#'></a>
+                  <a className='team-social-icons' href='#'></a>
+                  <a className='team-social-icons' href='#'></a>
+                </div>
+              </div>
+              {/* end of first card */}
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </div>
   );

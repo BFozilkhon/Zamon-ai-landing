@@ -2,9 +2,7 @@ import React from 'react';
 
 import PostCard from './card/postCard';
 
-import img1 from '../../assets/images/posts.jpeg';
-import img2 from '../../assets/images/post2.webp';
-import img3 from '../../assets/images/post3.jpg';
+import postsData from '../../assets/fake_data/posts_data';
 
 import './style.css';
 
@@ -18,9 +16,9 @@ const Posts = () => {
         News, tips, tricks and more
       </p>
       <div className='posts-cards'>
-        <PostCard animate='fade-right' img={img3} />
-        <PostCard animate='fade-left' img={img2} />
-        <PostCard animate='fade-right' img={img1} />
+        {postsData?.map((value, index) => {
+          return <PostCard key={value.id} data={value} index={index + 1} />;
+        })}
       </div>
       <button data-aos='fade-up' className='posts-btn'>
         See More

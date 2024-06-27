@@ -58,10 +58,37 @@
   color: var(--white-txt-color);
   cursor: pointer;
   transform: scale(1);
+  position: relative;
+  overflow: hidden; 
 }
 
 .opener-btn:active {
   transform: scale(0.96);
+}
+
+.opener-btn::before,
+.opener-btn::after {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: #ae310b;
+  content: '';
+  transition: width 1s;
+  z-index: -1;
+}
+
+.opener-btn::before {
+  left: 0;
+}
+
+.opener-btn::after {
+  right: 0;
+}
+
+.opener-btn:hover::before,
+.opener-btn:hover::after {
+  width: 100%;
 }
 
 .opener-box2 {
