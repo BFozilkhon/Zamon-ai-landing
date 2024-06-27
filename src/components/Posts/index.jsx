@@ -11,14 +11,20 @@ import './style.css';
 const Posts = () => {
   return (
     <div className='posts-container'>
-      <h1 className='posts-header'>Article and News</h1>
-      <p className='posts-descr'>News, tips, tricks and more</p>
+      <h1 data-aos='fade-up' className='posts-header'>
+        Article and News
+      </h1>
+      <p data-aos='fade-up' className='posts-descr'>
+        News, tips, tricks and more
+      </p>
       <div className='posts-cards'>
-        <PostCard img={img3} />
-        <PostCard img={img2} />
-        <PostCard img={img1} />
+        <PostCard animate='fade-right' img={img3} />
+        <PostCard animate='fade-left' img={img2} />
+        <PostCard animate='fade-right' img={img1} />
       </div>
-      <button className='posts-btn'>See More</button>
+      <button data-aos='fade-up' className='posts-btn'>
+        See More
+      </button>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 .nav-container {
   width: 100%;
-  padding: 20px 0px;
+  padding: 20px 40px;
   background: var(--primary-color);
 }
 
@@ -62,4 +62,23 @@
 
 .nav-btn:active {
   transform: scale(0.96);
+}
+
+@media (max-width: 920px) {
+  .nav-items {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav-container {
+    padding: 15px 20px;
+  }
+  .logo-head {
+    font-size: 30px;
+  }
+  .nav-btn {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
 }

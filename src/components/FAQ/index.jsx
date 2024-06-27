@@ -18,10 +18,10 @@ const FAQ = () => {
 
   return (
     <div className='faq-container'>
-      <h1 className='faq-header'>
+      <h1 data-aos='fade-up' className='faq-header'>
         Frequently Asked <br /> Questions
       </h1>
-      <div className='faq-box'>
+      <div data-aos='zoom-in-down' className='faq-box'>
         <div className='faq-circles'>
           <div className='faq-circle circle-red' />
           <div className='faq-circle circle-orange' />

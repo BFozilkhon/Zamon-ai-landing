@@ -14,6 +14,7 @@
 
 .opener-box1 {
   flex: 1;
+  flex-shrink: 3;
 }
 
 .opener-prompt {
@@ -66,4 +67,91 @@
 .opener-box2 {
   flex: 1;
   margin-right: -80px;
+}
+
+@media (max-width: 1300px) {
+  .opener-img {
+    width: 100%;
+  }
+  .opener-box1 {
+    flex: 2;
+  }
+
+  .opener-title {
+    font-size: 45px;
+  }
+  .opener-descr {
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
+  .opener-btn {
+    padding: 12px 32px;
+    text-wrap: nowrap;
+  }
+  .opener-box2 {
+    margin-right: 0px;
+    flex: 3;
+  }
+}
+
+@media (max-width: 920px) {
+  .opener-container {
+    padding: 50px 30px;
+  }
+  .opener-wrapper {
+    flex-direction: column-reverse;
+    gap: 60px;
+  }
+  .opener-box1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .opener-title {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+  }
+  .opener-descr {
+    text-align: center;
+    width: 70%;
+  }
+  .opener-box2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+  .opener-img {
+    width: 70%;
+    height: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  .opener-container {
+    padding: 40px 20px;
+  }
+  .opener-wrapper {
+    gap: 40px;
+  }
+  .opener-title {
+    font-size: 30px;
+  }
+  .opener-descr {
+    width: 100%;
+  }
+  .opener-btn-flex {
+    width: 100%;
+    gap: 10px;
+  }
+  .opener-btn {
+    width: 100%;
+  }
+  .opener-img {
+    width: 100%;
+  }
 }

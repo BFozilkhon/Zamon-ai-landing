@@ -15,13 +15,35 @@ import img1 from '../../assets/images/team.png';
 
 import './style.css';
 
+const teamSlider = {
+  navigation: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    600: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 25,
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+  },
+};
+
 const Team = () => {
   return (
     <div className='team-container'>
-      <h1 className='team-header'>
+      <h1 data-aos='fade-up' className='team-header'>
         Our <span>The BEST</span> Team
       </h1>
-      <p className='team-descr'>
+      <p data-aos='fade-up' className='team-descr'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt soluta ut,
         voluptatum repudiandae mollitia iste beatae facere quo, quod distinctio
         perspiciatis minima corrupti esse tempora? Quam soluta iure porro et
@@ -29,11 +51,12 @@ const Team = () => {
       </p>
 
       <Swiper
+        data-aos='fade-up'
         slidesPerView={4}
-        spaceBetween={30}
+        {...teamSlider}
         loop={true}
         autoplay={{
-          delay: 2500,
+          delay: 1500,
           disableOnInteraction: false,
         }}
         navigation={true}
@@ -41,9 +64,9 @@ const Team = () => {
           clickable: true,
         }}
         modules={[Navigation, Autoplay]}
-        className='mySwiper'
+        className='team-swiper'
       >
-        <SwiperSlide>
+        <SwiperSlide className='team-swiper-slide'>
           {/* first card */}
           <div className='team-card'>
             <img className='team-img' src={img1} alt='team-img1' />
@@ -57,7 +80,7 @@ const Team = () => {
           </div>
           {/* end of first card */}
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className='team-swiper-slide'>
           {/* first card */}
           <div className='team-card'>
             <img className='team-img' src={img1} alt='team-img1' />
@@ -71,7 +94,7 @@ const Team = () => {
           </div>
           {/* end of first card */}
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className='team-swiper-slide'>
           {/* first card */}
           <div className='team-card'>
             <img className='team-img' src={img1} alt='team-img1' />
@@ -85,7 +108,7 @@ const Team = () => {
           </div>
           {/* end of first card */}
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className='team-swiper-slide'>
           {/* first card */}
           <div className='team-card'>
             <img className='team-img' src={img1} alt='team-img1' />
@@ -99,7 +122,7 @@ const Team = () => {
           </div>
           {/* end of first card */}
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className='team-swiper-slide'>
           {/* first card */}
           <div className='team-card'>
             <img className='team-img' src={img1} alt='team-img1' />

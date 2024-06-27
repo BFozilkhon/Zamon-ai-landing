@@ -47,3 +47,47 @@
 .posts-btn:active {
   transform: scale(0.96);
 }
+
+@media (max-width: 1300px) {
+  .posts-container {
+    padding: 50px 20px;
+  }
+  .posts-cards {
+    gap: 30px;
+  }
+  .posts-header {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .posts-cards {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .posts-header {
+    font-size: 30px;
+  }
+
+  .posts-descr {
+    font-size: 14px;
+    margin: 15px 0px 40px 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .posts-header {
+    font-size: 25px;
+  }
+  .posts-descr {
+    margin: 10px 0px 30px 0px;
+    width: 100%;
+  }
+  .posts-btn {
+    margin-top: 40px;
+    padding: 10px 30px;
+    font-size: 16px;
+  }
+}
