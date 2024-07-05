@@ -20,8 +20,16 @@ const Opener = () => {
             and publishing industries for previewing layouts and visual mockups.
           </p>
           <div data-aos='fade-up' className='opener-btn-flex'>
-            <button className='opener-btn'>Get Started</button>
-            <button className='opener-btn'>Subscribe</button>
+            <a className='opener-link' href='#news'>
+              <button className='opener-btn'>Get Started</button>
+            </a>
+            <a
+              className='opener-link'
+              target='_blank'
+              href='https://docs.google.com/forms/d/1C9jK9pXhVOamv8qpMeS8yNBxkOzzEWlEyST6vWQ33oI/edit'
+            >
+              <button className='opener-btn'>Register</button>
+            </a>
           </div>
         </div>
         <div className='opener-box2'>

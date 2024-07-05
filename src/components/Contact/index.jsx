@@ -37,7 +37,7 @@ const Contact = () => {
   };
 
   return (
-    <div className='contact-container'>
+    <div id='contact' className='contact-container'>
       <h1 data-aos='fade-up' className='contact-header'>
         ZamonAI <span> Contact</span>
       </h1>

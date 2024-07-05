@@ -93,7 +93,7 @@ const Navbar = () => {
                 setIsOpen(!isOpen);
                 setLocationName('contact');
               }}
-              to='/#faq'
+              to='/#contact'
               className='nav-item contact'
             >
               Contact
@@ -102,7 +102,9 @@ const Navbar = () => {
         </div>
         <div className='flex-btn-menu'>
           <Turn toggled={isOpen} toggle={setIsOpen} />
-          <button className='nav-btn'>Contact</button>
+          <a href='#contact'>
+            <button className='nav-btn'>Contact</button>
+          </a>
         </div>
       </div>
     </div>
