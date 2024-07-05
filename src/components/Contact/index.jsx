@@ -6,34 +6,59 @@ import './style.css';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
-    phone: '',
+    phone: '+998',
     telegram: '',
     message: '',
   });
 
+  const [errors, setErrors] = useState({});
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+
+    if (name === 'phone') {
+      const formattedPhone = value.replace(/[^\d]/g, '');
+
+      setFormData({ ...formData, [name]: '+998' + formattedPhone.slice(3) });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.name) newErrors.name = 'Name is required';
+    if (!formData.phone || !/^\+998\d{9}$/.test(formData.phone))
+      newErrors.phone = 'Valid phone number is required';
+    if (!formData.telegram)
+      newErrors.telegram = 'Telegram username is required';
+    if (!formData.message) newErrors.message = 'Message is required';
+    return newErrors;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    emailjs
-      .send(
-        'service_wlkxbt9',
-        'template_l2dgs5g',
-        formData,
-        'user_pywPsnKY1q8czlk9MyD56'
-      )
-      .then(
-        (result) => {
-          alert('Message sent successfully!');
-        },
-        (error) => {
-          alert('An error occurred, please try again.');
-        }
-      );
+    const formErrors = validateForm();
+    if (Object.keys(formErrors).length === 0) {
+      emailjs
+        .send(
+          'service_wlkxbt9',
+          'template_l2dgs5g',
+          formData,
+          'user_pywPsnKY1q8czlk9MyD56'
+        )
+        .then(
+          (result) => {
+            alert('Message sent successfully!');
+            window.location.reload();
+          },
+          (error) => {
+            alert('An error occurred, please try again.');
+          }
+        );
+    } else {
+      setErrors(formErrors);
+    }
   };
 
   return (
@@ -59,6 +84,7 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
             />
+            {errors.name && <span className='error'>{errors.name}</span>}
             <input
               className='contact-input'
               placeholder='Phone Number'
@@ -67,6 +93,7 @@ const Contact = () => {
               value={formData.phone}
               onChange={handleChange}
             />
+            {errors.phone && <span className='error'>{errors.phone}</span>}
             <input
               className='contact-input'
               placeholder='Telegram Username'
@@ -75,6 +102,9 @@ const Contact = () => {
               value={formData.telegram}
               onChange={handleChange}
             />
+            {errors.telegram && (
+              <span className='error'>{errors.telegram}</span>
+            )}
             <textarea
               className='contact-textarea'
               placeholder='Ask your question?'
@@ -83,6 +113,7 @@ const Contact = () => {
               value={formData.message}
               onChange={handleChange}
             ></textarea>
+            {errors.message && <span className='error'>{errors.message}</span>}
             <button className='contact-btn' type='submit'>
               Send Message
             </button>
