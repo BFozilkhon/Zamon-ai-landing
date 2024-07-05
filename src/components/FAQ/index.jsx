@@ -17,7 +17,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className='faq-container'>
+    <div id='faq' className='faq-container'>
       <h1 data-aos='fade-up' className='faq-header'>
         Frequently Asked <br /> Questions
       </h1>

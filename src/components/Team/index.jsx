@@ -40,7 +40,7 @@ const teamSlider = {
 
 const Team = () => {
   return (
-    <div className='team-container'>
+    <div id='team' className='team-container'>
       <h1 data-aos='fade-up' className='team-header'>
         Our <span>The BEST</span> Team
       </h1>

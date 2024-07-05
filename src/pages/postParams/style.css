@@ -1,0 +1,79 @@
+.post-params-container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  padding: 50px 40px 80px 40px;
+  margin: auto;
+  gap: 80px;
+}
+
+.post-params-box1 {
+  flex: 1;
+}
+
+.post-params-box2 {
+  width: 300px;
+  background: var(--card-color);
+  height: 550px;
+}
+
+.post-params-title {
+  color: #ffffff;
+  margin: 20px 0px;
+}
+
+.post-params-descr {
+  color: #ffffff;
+  line-height: 28px;
+}
+
+.post-params-img {
+  width: 100%;
+  height: 550px;
+}
+
+.post-params-flex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.post-params-prompt {
+  padding: 10px 20px;
+  background-color: var(--card-color);
+  color: white;
+}
+
+@media (max-width: 920px) {
+  .post-params-container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .post-params-img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .post-params-container {
+    padding: 40px 20px 50px 20px;
+  }
+  .post-params-title {
+    font-size: 24px;
+    margin: 15px 0px;
+  }
+
+  .post-params-descr {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .post-params-prompt {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}

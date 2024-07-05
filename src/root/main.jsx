@@ -1,12 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 import Aos from 'aos';
+import { Routes, Route } from 'react-router-dom';
 
 import Navbar from '../components/Navbar';
-import Opener from '../components/Opener';
-import Posts from '../components/Posts';
-import FAQ from '../components/FAQ';
-import Team from '../components/Team';
 import Footer from '../components/Footer';
+import Home from '../pages/home';
+import PostsPage from '../pages/posts';
+import Top from '../components/TopBar';
+import PostParams from '../pages/postParams';
 
 const MainRoot = () => {
   useEffect(() => {
@@ -16,15 +17,22 @@ const MainRoot = () => {
       once: false,
     });
   }, []);
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
-    <div>
+    <>
       <Navbar />
-      <Opener />
-      <Posts />
-      <Team />
-      <FAQ />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/posts' element={<PostsPage />} />
+        <Route path='/post/:id' element={<PostParams />} />
+      </Routes>
+      <Top />
       <Footer />
-    </div>
+    </>
   );
 };
 

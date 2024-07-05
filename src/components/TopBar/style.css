@@ -1,0 +1,24 @@
+.container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 24px;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  z-index: 99999;
+}
+
+.container:active {
+  transform: scale(0.98);
+}
+
+.icon {
+  font-weight: 400;
+  color: white;
+  font-size: 24px;
+}

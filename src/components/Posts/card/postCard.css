@@ -1,5 +1,5 @@
 .posts-card {
-  max-width: 480px;
+  max-width: 31%;
   padding: 16px;
   border-radius: 5px;
   border: 1px solid var(--secondary-color);
@@ -7,6 +7,12 @@
   transition: 0.3s all;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 1600px) {
+  .posts-card {
+    max-width: 30%;
+  }
 }
 
 .posts-card:hover {
@@ -120,6 +126,9 @@
 }
 
 @media (max-width: 1400px) {
+  .posts-card {
+    max-width: 400px;
+  }
   .posts-card-img {
     height: 220px;
   }
@@ -188,6 +197,10 @@
   }
 
   .posts-card-btn {
+    width: 100%;
+  }
+
+  .posts-link {
     width: 100%;
   }
 

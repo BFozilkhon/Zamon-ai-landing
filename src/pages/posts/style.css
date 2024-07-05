@@ -6,8 +6,6 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  max-width: 1600px;
-  margin: auto;
 }
 
 .detail1 {
@@ -21,10 +19,6 @@
   font-weight: 900;
   color: var(--white-txt-color);
   text-align: center;
-}
-
-.posts-header span {
-  color: var(--secondary-color);
 }
 
 .posts-descr {

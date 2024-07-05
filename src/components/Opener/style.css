@@ -2,6 +2,7 @@
   width: 100%;
   background: var(--primary-color);
   padding: 60px 40px;
+  position: relative;
 }
 
 .opener-wrapper {
@@ -59,7 +60,7 @@
   cursor: pointer;
   transform: scale(1);
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .opener-btn:active {
