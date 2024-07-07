@@ -1,0 +1,148 @@
+.purpose-container {
+  width: 100%;
+  padding: 80px 40px 60px 40px;
+}
+
+.purpose-wrapper {
+  max-width: 1300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px auto;
+}
+
+.purpose-header {
+  font-size: 40px;
+  font-weight: 900;
+  color: var(--white-txt-color);
+  text-align: center;
+}
+
+.purpose-header span {
+  color: var(--secondary-color);
+}
+
+.purpose-descr {
+  font-size: 16px;
+  color: var(--white-txt-color);
+  opacity: 0.7;
+  margin: 20px 0px 80px 0px;
+  text-align: center;
+  width: 70%;
+}
+
+.purpose-box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.purpose-card {
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--card-color);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+.purpose-card::before {
+  content: '';
+  position: absolute;
+  background: radial-gradient(
+    circle,
+    rgba(58, 104, 184, 0.2) 0%,
+    rgba(16, 23, 36, 0.95) 60%
+  );
+  transition: 0.5s all;
+  z-index: -1;
+  border-radius: 50%;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+}
+
+.purpose-circle {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: var(--primary-color);
+}
+
+.purpose-card-title {
+  color: var(--white-txt-color);
+  margin: 30px 0px 15px 0px;
+}
+
+.purpose-icon {
+  color: var(--secondary-color);
+  font-size: 30px;
+}
+
+.purpose-card-descr {
+  color: var(--white-txt-color);
+  opacity: 0.7;
+}
+
+@media (max-width: 1300px) {
+  .purpose-container {
+    padding: 30px 40px 70px 40px;
+  }
+  .purpose-header {
+    font-size: 35px;
+  }
+  .purpose-box {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .purpose-container {
+    padding: 20px 30px 60px 30px;
+  }
+  .purpose-header {
+    font-size: 30px;
+  }
+  .purpose-descr {
+    font-size: 14px;
+    margin: 15px 0px 40px 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .purpose-box {
+    grid-template-columns: 350px;
+    justify-content: center;
+  }
+  .purpose-container {
+    padding: 15px 30px 50px 30px;
+  }
+  .purpose-header {
+    font-size: 25px;
+  }
+  .purpose-descr {
+    margin: 10px 0px 30px 0px;
+    width: 100%;
+  }
+  .purpose-card-title {
+    font-size: 18px;
+    margin: 20px 0px 10px;
+  }
+  .purpose-card-descr {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .purpose-box {
+    grid-template-columns: 1fr;
+  }
+}

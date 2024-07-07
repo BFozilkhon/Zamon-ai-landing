@@ -14,7 +14,7 @@ const MainRoot = () => {
     Aos.init({
       duration: 2000,
       mirror: true,
-      once: false,
+      once: true,
     });
   }, []);
 
