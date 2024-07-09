@@ -19,7 +19,7 @@ const Purpose = () => {
             <div className='purpose-circle'>
               <FaBrain className='purpose-icon' />
             </div>
-            <h3 className='purpose-card-title'>Our Vision</h3>
+            <h3 className='purpose-card-title'>Bizning Kelajakimiz</h3>
             <i className='purpose-card-descr'>
               Kompyuter fanini universal tushunish hozirgi va kelajakdagi
               jamiyatimiz uchun zarur. Bugungi bolalar mehnatga qo'shilishlari
@@ -36,7 +36,7 @@ const Purpose = () => {
             <div className='purpose-circle'>
               <FaUsers className='purpose-icon' />
             </div>
-            <h3 className='purpose-card-title'>Our Mission</h3>
+            <h3 className='purpose-card-title'>Bizning Missiyamiz </h3>
             <i className='purpose-card-descr'>
               Maqsadimiz O‘zbekistondagi turli millatga mansub talabalarga
               informatika fanini o‘rganish va allaqachon qiziqish uyg‘otayotgan
@@ -53,7 +53,7 @@ const Purpose = () => {
             <div className='purpose-circle'>
               <FaLaptopCode className='purpose-icon' />
             </div>
-            <h3 className='purpose-card-title'>Our Goal</h3>
+            <h3 className='purpose-card-title'>Bizning Maqsadimiz</h3>
             <i className='purpose-card-descr'>
               Oʻzbekiston maktablarida nazariy informatika darslarining amaliy
               bilim yetishmasligini hal qilish uchun yetakchi
@@ -69,7 +69,7 @@ const Purpose = () => {
             <div className='purpose-circle'>
               <FaHandsHelping className='purpose-icon' />
             </div>
-            <h3 className='purpose-card-title'>Our Impact</h3>
+            <h3 className='purpose-card-title'>Bizning Afzalliklarimiz</h3>
             <i className='purpose-card-descr'>
               ZamonAI har doim bepul bo'ladi va u barcha o'rta va yuqori sinf
               o'quvchilari uchun ochiq. Biz ishonamizki, erta boshlash va yosh
