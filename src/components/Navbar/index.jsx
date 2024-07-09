@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Turn } from 'hamburger-react';
 
-import logo from '../../assets/images/logo.jpg';
-
 import './style.css';
-import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [locationName, setLocationName] = useState('');
@@ -53,11 +51,18 @@ const Navbar = () => {
               to='/#home'
               className='nav-item'
             >
-              Home
+              Asosiy
             </Link>
-            {/* <a href='#' className='nav-item'>
-              Hackathon
-            </a> */}
+            <Link
+              onClick={() => {
+                setIsOpen(!isOpen);
+                setLocationName('hackathon');
+              }}
+              to='/#hackathon'
+              className='nav-item'
+            >
+              Hakatonlar
+            </Link>
             <Link
               onClick={() => {
                 setIsOpen(!isOpen);
@@ -66,7 +71,7 @@ const Navbar = () => {
               to='/#news'
               className='nav-item'
             >
-              News
+              Maqolalar
             </Link>
             <Link
               onClick={() => {
@@ -76,7 +81,7 @@ const Navbar = () => {
               to='/#team'
               className='nav-item'
             >
-              Team
+              Jamoa
             </Link>
             <Link
               onClick={() => {
@@ -88,6 +93,7 @@ const Navbar = () => {
             >
               FAQ
             </Link>
+
             <Link
               onClick={() => {
                 setIsOpen(!isOpen);
@@ -96,14 +102,14 @@ const Navbar = () => {
               to='/#contact'
               className='nav-item contact'
             >
-              Contact
+              Bog'lanish
             </Link>
           </div>
         </div>
         <div className='flex-btn-menu'>
           <Turn toggled={isOpen} toggle={setIsOpen} />
           <a href='#contact'>
-            <button className='nav-btn'>Contact</button>
+            <button className='nav-btn'>Bog'lanish</button>
           </a>
         </div>
       </div>

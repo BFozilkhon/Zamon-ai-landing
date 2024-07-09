@@ -10,25 +10,27 @@ const Opener = () => {
       <div className='opener-wrapper'>
         <div data-aos='fade-up-right' className='opener-box1'>
           <h3 data-aos='fade-up-right' className='opener-prompt'>
-            First AI Project in Uzbekistan
+            Sun'iy Intellekt bo'yicha maqolalar
           </h3>
           <h1 data-aos='fade-up' className='opener-title'>
-            Artificial intelligence & Cyber security
+            Sun'iy intellekt Maqolalar & Hakatonlar
           </h1>
           <p data-aos='fade-up' className='opener-descr'>
-            Lorem ipsum is placeholder text commonly used in the graphic, print,
-            and publishing industries for previewing layouts and visual mockups.
+            Maqsadimiz postlarimiz va eventlarimiz orqali maktab
+            o’quvchilarining kompyuter fanlari va Sun’iy Intellekt ga yanada
+            kengroq miqyosda qiziqishlarini rivojlantirishga yordam berishdir.
           </p>
           <div data-aos='fade-up' className='opener-btn-flex'>
-            <a className='opener-link' href='#news'>
-              <button className='opener-btn'>Get Started</button>
+            <a className='opener-link' href='#purpose'>
+              <button className='opener-btn'>Boshlash</button>
             </a>
             <a
               className='opener-link'
               target='_blank'
-              href='https://docs.google.com/forms/d/1C9jK9pXhVOamv8qpMeS8yNBxkOzzEWlEyST6vWQ33oI/edit'
+              rel='noreferrer'
+              href='https://docs.google.com/forms/d/1T6Ef1fnxQU72cpc0rozwlh4SWrpenu7G0Fe8LHohTqY/edit'
             >
-              <button className='opener-btn'>Register</button>
+              <button className='opener-btn'>Registratsiya</button>
             </a>
           </div>
         </div>

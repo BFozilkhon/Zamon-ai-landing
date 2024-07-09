@@ -16,6 +16,10 @@
   margin-bottom: 40px;
 }
 
+.faq-header span {
+  color: var(--secondary-color);
+}
+
 .faq-box {
   border-radius: 5px;
   background: var(--card-color);
@@ -101,6 +105,13 @@
   font-size: 16px;
   color: var(--white-txt-color);
   opacity: 0.7;
+}
+
+.faq-answer-part a {
+  font-size: 16px;
+  color: blue;
+  text-transform: capitalize;
+  margin-top: 10px;
 }
 
 .faq-qs-line {

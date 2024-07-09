@@ -28,11 +28,13 @@
 }
 
 .posts-descr {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--white-txt-color);
   opacity: 0.7;
   margin: 20px 0px 80px 0px;
   text-align: center;
+  width: 40%;
+  line-height: 25px;
 }
 
 .posts-cards {
@@ -103,6 +105,9 @@
 @media (max-width: 1020px) {
   .posts-cards {
     flex-wrap: wrap;
+  }
+  .posts-descr {
+    width: 70%;
   }
 }
 

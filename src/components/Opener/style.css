@@ -169,6 +169,9 @@
   .opener-title {
     font-size: 30px;
   }
+  .opener-prompt {
+    text-align: center;
+  }
   .opener-descr {
     width: 100%;
   }

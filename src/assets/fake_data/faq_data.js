@@ -1,39 +1,40 @@
 const faqData = [
   {
     id: 1,
-    question: 'What is Artificial Intelligence?',
+    question: 'TeenHack 2024 hakatoni nima?',
     answer:
-      'Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think and learn like humans.',
+      "TeenHack 2024 hakatoni, Target International School va Zamon AI tomonidan tashkil etilgan, maktab o'quvchilari uchun maxsus bir hackathon.",
   },
   {
     id: 2,
-    question: 'How does machine learning work?',
+    question: 'Registratsiya qanday qilib amalga oshiriladi?',
     answer:
-      'Machine learning is a subset of AI that involves training algorithms on data so they can make predictions or decisions without being explicitly programmed to perform the task.',
+      "Registratsiya 25-Iyul sanasiga qadar amalga oshirilishi kerak va bu 23:59 gacha davom etadi. Shu link orqali ro'yxatdan o'tiladi ",
+    link: 'https://docs.google.com/forms/d/1T6Ef1fnxQU72cpc0rozwlh4SWrpenu7G0Fe8LHohTqY/edit',
   },
   {
     id: 3,
-    question: 'What are neural networks?',
+    question: "Sovg'alar qanday eslatib o'tiladi?",
     answer:
-      'Neural networks are a series of algorithms that attempt to recognize underlying relationships in a set of data through a process that mimics the way the human brain operates.',
+      "TeenHack hakatonining sovg'alari 1-O'rin uchun 5 million so'm, 2-O'rin uchun 3 million so'm va 3-O'rin uchun 2 million so'm mablag'larini o'z ichiga oladi.",
   },
   {
     id: 4,
-    question: 'What is natural language processing?',
+    question: "Qanday qilib hakaton o'tkaziladi?",
     answer:
-      'Natural Language Processing (NLP) is a branch of AI that focuses on the interaction between computers and humans through natural language.',
+      "TeenHack hakatoni 27-28-29-Iyul kunlari o'tkaziladi. O'quvchilar hackathon davomida yangi yondoshlar o'rganish, muammolar yechish va ijro etilishi lozim bo'lgan vazifalarga yechim topishlari talab qilinadi.",
   },
   {
     id: 5,
-    question: 'What are some applications of AI?',
+    question: 'Kim qatnashishi mumkin?',
     answer:
-      'Applications of AI include autonomous vehicles, medical diagnosis, voice assistants, recommendation systems, and fraud detection, among many others.',
+      "TeenHack Hakatoniga faqatgina maktab o'quvchilari qatnashishi mumkin",
   },
   {
     id: 6,
-    question: 'What is the future of AI?',
+    question: "Qanday qilib TeenHack hakatoni yutuqlarini e'lon qilinadi?",
     answer:
-      'The future of AI includes advancements in areas such as self-learning systems, improved human-machine interaction, and the integration of AI in various fields like healthcare, finance, and transportation.',
+      "Yutuqlar TeenHack hakatoni saytida va ijtimoiy tarmoqlarda e'lon qilinadi, bu yerda qanday qilib g'oliblar e'lon qilinayotganligi, shu jumladan, ularning nomi, loyiha haqida ma'lumotlar keltiriladi.",
   },
 ];
 

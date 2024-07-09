@@ -64,7 +64,7 @@ const Contact = () => {
   return (
     <div id='contact' className='contact-container'>
       <h1 data-aos='fade-up' className='contact-header'>
-        ZamonAI <span> Contact</span>
+        ZamonAI bilan <span> Bog'lanish</span>
       </h1>
       <div className='contact-wrapper'>
         <img
@@ -74,7 +74,7 @@ const Contact = () => {
           alt='img'
         />
         <div data-aos='fade-up-left' className='contact-box2'>
-          <h3 className='contact-title'>Send your question</h3>
+          <h3 className='contact-title'>Savollaringiz bo'lsa yo'llang!</h3>
           <form onSubmit={handleSubmit}>
             <input
               className='contact-input'
@@ -107,7 +107,7 @@ const Contact = () => {
             )}
             <textarea
               className='contact-textarea'
-              placeholder='Ask your question?'
+              placeholder='Savol&Takliflaringizni Yozing'
               rows={7}
               name='message'
               value={formData.message}
@@ -115,7 +115,7 @@ const Contact = () => {
             ></textarea>
             {errors.message && <span className='error'>{errors.message}</span>}
             <button className='contact-btn' type='submit'>
-              Send Message
+              Xabar Yuborish
             </button>
           </form>
         </div>

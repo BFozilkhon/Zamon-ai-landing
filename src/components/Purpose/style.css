@@ -29,7 +29,8 @@
   opacity: 0.7;
   margin: 20px 0px 80px 0px;
   text-align: center;
-  width: 70%;
+  line-height: 25px;
+  width: 50%;
 }
 
 .purpose-box {
@@ -101,6 +102,12 @@
   }
   .purpose-box {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 920px) {
+  .purpose-descr {
+    width: 70%;
   }
 }
 

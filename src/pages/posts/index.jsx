@@ -19,10 +19,11 @@ const PostsPage = () => {
     <div className='posts-container'>
       {/* <img className='detail1' src={detail1} alt='detail-1' /> */}
       <h1 data-aos='fade-up' className='posts-header'>
-        Article and News
+        Maqolalar <span>va Yangiliklar</span>
       </h1>
       <p data-aos='fade-up' className='posts-descr'>
-        News, tips, tricks and more
+        Bu sahifa maqolalar, so'nggi yangiliklar va texnologiyalar bilan bog'liq
+        ma'lumotlarni o'z ichiga oladi{' '}
       </p>
       <div className='posts-cards'>
         {data?.map((value, index) => {

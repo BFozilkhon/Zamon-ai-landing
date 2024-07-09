@@ -73,6 +73,11 @@
   transform: scale(0.96);
 }
 
+.hack-txt-mark {
+  color: var(--secondary-color);
+  font-weight: 900;
+}
+
 .hack-btn::before,
 .hack-btn::after {
   position: absolute;

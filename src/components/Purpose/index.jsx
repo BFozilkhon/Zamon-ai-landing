@@ -5,35 +5,48 @@ import './style.css';
 
 const Purpose = () => {
   return (
-    <div className='purpose-container'>
+    <div id='purpose' className='purpose-container'>
       <div className='purpose-wrapper'>
         <h1 data-aos='fade-up' className='purpose-header'>
-          Mission <span>& Vision</span>
+          Maqsad <span>& Kelajak</span>
         </h1>
         <p data-aos='fade-up' className='purpose-descr'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam,
-          quas!
+          O‘zbekistonda AI va informatika fanlarini rivojlantirish va
+          xilma-xillikni oshirish maqsadida bepul ZamonAI loyihasi
         </p>
         <div data-aos='fade-up' className='purpose-box'>
           <div className='purpose-card'>
             <div className='purpose-circle'>
               <FaBrain className='purpose-icon' />
             </div>
-            <h3 className='purpose-card-title'>Our Mission</h3>
+            <h3 className='purpose-card-title'>Our Vision</h3>
             <i className='purpose-card-descr'>
-              Universal understanding of AI is essential. To create fair and
-              unbiased AI, we must increase diversity and representation in the
-              field.
+              Kompyuter fanini universal tushunish hozirgi va kelajakdagi
+              jamiyatimiz uchun zarur. Bugungi bolalar mehnatga qo'shilishlari
+              bilan sun'iy intellekt kundalik hayotning asosiga aylanishi
+              muqarrar. Atrofimizdagi har bir sohada sun'iy intellekt
+              qo'llanilsa, uni tushunmaydiganlar noqulay ahvolga tushib
+              qolishadi. Shuningdek, biz ko'plab sohalar va hayotga ta'sir
+              qiladigan adolatli va xolis sun'iy intellektni ishlab chiqarish
+              uchun AI sohasida xilma-xillik va vakillikni oshirishimiz
+              kerakligini ham tushunamiz.
             </i>
           </div>
           <div className='purpose-card'>
             <div className='purpose-circle'>
               <FaUsers className='purpose-icon' />
             </div>
-            <h3 className='purpose-card-title'>Our Vision</h3>
+            <h3 className='purpose-card-title'>Our Mission</h3>
             <i className='purpose-card-descr'>
-              Empower diverse students in Uzbekistan to explore AI and computer
-              science, fostering diversity from middle and high school.
+              Maqsadimiz O‘zbekistondagi turli millatga mansub talabalarga
+              informatika fanini o‘rganish va allaqachon qiziqish uyg‘otayotgan
+              talabalarga, xususan, AIga qiziqishlarini tasdiqlashdir. Ushbu
+              tadbir uchun turli xil yollashimiz bilan biz kompyuter fanlari va
+              AI kelajagini iloji boricha xilma-xil qilishga harakat qila
+              olamiz. O‘rta va o‘rta maktabga qiziqish urug‘ini ekish orqali
+              O‘zbekistonda kam ta’minlangan o‘quvchilar sun’iy intellekt va
+              informatika bilan bog‘liq kasblarni egallashga ko‘proq
+              rag‘batlantiriladi.{' '}
             </i>
           </div>
           <div className='purpose-card'>
@@ -42,9 +55,14 @@ const Purpose = () => {
             </div>
             <h3 className='purpose-card-title'>Our Goal</h3>
             <i className='purpose-card-descr'>
-              Address the gap between theoretical and practical knowledge in
-              Uzbekistan by conducting hackathons and master classes, fostering
-              practical skills and teamwork.
+              Oʻzbekiston maktablarida nazariy informatika darslarining amaliy
+              bilim yetishmasligini hal qilish uchun yetakchi
+              IT-mutaxassislardan xakaton va mahorat darslarini oʻtkazamiz.
+              Hackathonlar orqali o‘quvchilar haqiqiy muammolarni hal qilish
+              uchun guruhlarda ishlaydi. Bu tajriba ularning amaliy va jamoaviy
+              ko‘nikmalarini rivojlantiradi. Maqsadimiz ZamonAI loyihasi orqali
+              kompyuter fanlari va sun'iy intellektga qiziqishni
+              kengaytirishdir.
             </i>
           </div>
           <div className='purpose-card'>
@@ -53,8 +71,11 @@ const Purpose = () => {
             </div>
             <h3 className='purpose-card-title'>Our Impact</h3>
             <i className='purpose-card-descr'>
-              ZamonAI is free and open to all students, aiming to build a strong
-              computer science foundation for a better future.
+              ZamonAI har doim bepul bo'ladi va u barcha o'rta va yuqori sinf
+              o'quvchilari uchun ochiq. Biz ishonamizki, erta boshlash va yosh
+              avlodni kuchli informatika "asboblar qutisi" ni yaratish uchun
+              zarur bo'lgan resurslar va tajribalar bilan ta'minlash orqali biz
+              ilm-fan uchun kuchli kelajakni o'rnatishga yordam bera olamiz.{' '}
             </i>
           </div>
         </div>

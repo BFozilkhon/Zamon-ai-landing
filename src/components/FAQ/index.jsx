@@ -19,7 +19,7 @@ const FAQ = () => {
   return (
     <div id='faq' className='faq-container'>
       <h1 data-aos='fade-up' className='faq-header'>
-        Frequently Asked <br /> Questions
+        Tez-tez so'raladigan <br /> <span>savollar</span>
       </h1>
       <div data-aos='zoom-in-down' className='faq-box'>
         <div className='faq-circles'>
@@ -28,7 +28,7 @@ const FAQ = () => {
           <div className='faq-circle circle-green' />
         </div>
 
-        <p className='faq-prompt'>6 FAQ Questions Answered</p>
+        <p className='faq-prompt'>{faqData.length}ta Savollarga Javoblar</p>
 
         <div className='faq-questions-wrapper'>
           {faqData.map((item) => (
@@ -55,6 +55,12 @@ const FAQ = () => {
               </div>
               <div className='faq-answer-part'>
                 <p>{item.answer}</p>
+                {item?.link && (
+                  <a target='_black' href={item?.link}>
+                    Ro'yxatdan O'tish
+                  </a>
+                )}
+
                 <hr className='faq-qs-line' />
               </div>
             </div>

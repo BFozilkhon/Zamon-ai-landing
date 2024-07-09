@@ -11,8 +11,6 @@ import 'swiper/css/navigation';
 // import required modules
 import { Navigation, Autoplay } from 'swiper/modules';
 
-import img1 from '../../assets/images/team.png';
-
 import './style.css';
 import teamData from '../../assets/fake_data/team_data';
 
@@ -42,13 +40,11 @@ const Team = () => {
   return (
     <div id='team' className='team-container'>
       <h1 data-aos='fade-up' className='team-header'>
-        Our <span>The BEST</span> Team
+        Bizning <span>Jamoa</span>
       </h1>
       <p data-aos='fade-up' className='team-descr'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt soluta ut,
-        voluptatum repudiandae mollitia iste beatae facere quo, quod distinctio
-        perspiciatis minima corrupti esse tempora? Quam soluta iure porro et
-        dolores enim aliquam odio, ducimus repellendus animi cum facere omnis?
+        Biz innovatsiyalardan foydalanib, muvaffaqiyatga erishishga intilamiz.
+        Hamkorlik va yuqori natijalar - bizning asosiy printsipimiz.
       </p>
 
       <Swiper
@@ -77,11 +73,7 @@ const Team = () => {
                   {value?.name} {value?.surname}
                 </h3>
                 <p className='team-position'>{value?.role}</p>
-                <div className='team-social-flex'>
-                  <a className='team-social-icons' href='#'></a>
-                  <a className='team-social-icons' href='#'></a>
-                  <a className='team-social-icons' href='#'></a>
-                </div>
+                <p className='team-telegram'>{value?.telegram}</p>
               </div>
               {/* end of first card */}
             </SwiperSlide>

@@ -1,414 +1,76 @@
-import img1 from '../images/posts.jpeg';
-import img2 from '../images/post2.webp';
-import img3 from '../images/post3.jpg';
+import img1 from '../images/article1.jpg';
+import img2 from '../images/article2.jpg';
+import img3 from '../images/article3.jpg';
+import img4 from '../images/article4.jpg';
 
 const postsData = [
   {
     id: 1,
-    img: img3,
-    type: 'PODCAST',
-    date: 'Sep 14, 2021',
-    title: 'Setup your own podcast',
+    img: img2,
+    type: 'Maqola',
+    date: 'July 10, 2024',
+    title: "Sun'iy intellekt nima va u dunyo bo’ylab qanday joriy etilmoqda?",
     description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
+    Sun'iy intellekt (AI) - bu mashinalarning tilni tushunish, tasvirlarni tanib olish, qaror qabul qilish va muammolarni hal qilish kabi odatda inson aql-zakovati talab qilinadigan vazifalarni bajarish qobiliyatini tavsiflovchi atama. AI yagona texnologiya emas, balki turli sohalar va ilovalarga qo'llanilishi mumkin bo'lgan usullar va vositalar to'plamidir.
+    
+    \br Sun'iy intellekt o'nlab yillar davomida mavjud bo'lib kelgan, ammo so'nggi yillarda hisoblash quvvati, ma'lumotlar mavjudligi va algoritmik texnikadagi yutuqlar tufayli u ko'proq e'tibor va mashhurlikka erishdi. AI endilikda shaxmat o‘ynash, kasalliklarni tashxislash, mashina haydash va musiqa bastalash kabi mashinalar uchun imkonsiz yoki o‘ta murakkab deb hisoblangan vazifalarni bajara oladi.
+    
+    \br AI bizning hayotimiz, jamiyatimiz va iqtisodiyotimizning ko'p qirralarini o'zgartirish imkoniyatiga ega. Bu bizning mahsuldorligimiz, samaradorligimiz, ijodkorligimiz va farovonligimizni yaxshilashga yordam beradi. Shuningdek, u iqlim o'zgarishi, qashshoqlik, sog'liqni saqlash va ta'lim kabi insoniyat oldida turgan eng katta muammolarni hal qilishda yordam berishi mumkin. Shu bilan birga, AI axloqiy, ijtimoiy, huquqiy va xavfsizlik masalalari kabi ba'zi xavf va qiyinchiliklarni ham keltirib chiqaradi. Shu sababli, sun'iy intellekt asoslarini, uning afzalliklari va cheklovlarini hamda undan qanday qilib mas'uliyatli va axloqiy foydalanishimiz mumkinligini tushunish muhimdir.
     `,
   },
   {
     id: 2,
-    img: img2,
-    type: 'ARTICLE',
-    date: 'Oct 21, 2021',
-    title: 'The impact of AI on modern society',
+    img: img3,
+    type: 'Maqola',
+    date: 'July 8, 2024',
+    title: "Sun'iy Intellekt qanday qilib o'rganiladi?",
     description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
+    AI ishlashini ta'minlaydigan uchta asosiy komponent mavjud:
 
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
+    \br Ma'lumotlar; AI tizimlari katta hajmdagi ma'lumotlarga o'rgatiladi, bu ularga modellarni o'rganish va aniqlash imkonini beradi. Bu ma'lumotlar matn va tasvirlardan tortib sensor ko'rsatkichlari va moliyaviy operatsiyalargacha bo'lgan har qanday narsa bo'lishi mumkin.
+    
+    \br 〽️ Algoritmlar; Algoritmlar AI tizimiga ma'lumotlarni qanday qayta ishlash va tahlil qilish kerakligini aytadigan ko'rsatmalar to'plamidir. Mashinani o'rganish, tabiiy tilni qayta ishlash va kompyuterni ko'rish kabi turli xil vazifalar uchun har xil turdagi algoritmlar qo'llaniladi.
+    
+    \br ➗ Hisoblash kuchi; AI hisob-kitoblari juda ko'p ishlov berish quvvatini talab qiladi. Shuning uchun AI tizimlari ko'pincha kuchli kompyuterlar yoki bulutli platformalarda ishlaydi.
+    
+    \br AI tizimlarini o'rganishning ikkita asosiy usuli mavjud:
+    
+    \br 🤖 Machine Learning; Bu AI tizimini etiketli misollarning katta ma'lumotlar to'plamida o'qitishni o'z ichiga oladi. Keyin tizim ma'lumotlardagi modellarni aniqlashni va bu modellar asosida bashorat qilishni o'rganadi.
+    
+    \br 🧠 Deep Learning; Bu inson miyasining tuzilishidan ilhomlangan sun'iy neyron tarmoqlardan foydalanadigan mashinani o'rganishning bir turi. Chuqur o'rganish tarmoqlari an'anaviy mashina o'rganish algoritmlarini aniqlash qiyin bo'lgan ma'lumotlardagi murakkab modellarni o'rganishi mumkin.
     `,
   },
   {
     id: 3,
-    img: img1,
-    type: 'VIDEO',
-    date: 'Nov 30, 2021',
-    title: 'Introduction to machine learning algorithms',
+    img: img4,
+    type: 'Maqola',
+    date: 'July 8, 2024',
+    title:
+      "Sun'iy Intellekt yaqin kelajakda odamlar ish o'rnini olib qo'ymaydimi?",
     description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
+    Sun'iy intellektning turli sohalarga ta'siri bir muncha vaqtdan beri muhokama qilinadigan mavzu. Garchi sun'iy intellekt korxonalarning ishlash uslubini o'zgartirayotganini inkor etib bo’lmasa ham, robot-mashinalar inson o'rnini to'liq almashtira olmasligini tushunish juda muhimdir.
+    
+    \br 🤖Buning o'rniga, sun'iy intellektga asoslangan robotlar inson aql-zakovatini to'ldiradi va samaradorlik va mahsuldorlikni oshirish uchun tandemda ishlaydi. Inson va mashina aqlining integratsiyasi bir qator vazifalarda samaradorlik va aniqlikni oshirishga olib keladi. Ushbu hamkorlik inson xatolarini minimallashtirish va aniqlikni oshirishga yordam beradi va natijada natijalar tezligini oshiradi. Shuni tan olish kerakki, avtomatlashtirish ma'lum ish o'rinlarini yo'qotishga olib kelishi bilan birga, yangi ish o'rinlarini ham yaratadi.
+    
+    \br 〽️Forrester hisobotiga ko'ra, avtomatlashtirish 2032 yilga borib AQShda 11 million (7%) ish o'rinlarini egallashiga qaramay, ular oddiy yo'qotishlar hisoblanadi, chunki ular asosan professional xizmatlar, qayta tiklanadigan energiya va aqlli infratuzilma kabi sohalarda yangi ish imkoniyatlari bilan muvozanatlanadi. Bundan tashqari, o‘n yil ichida yaratilgan 9,6 milliondan ortiq ish o‘rinlari ish o‘rinlarini yo‘qotishlar sonini 11 milliondan 1,5 milliongacha kamaytiradi. (Manba)
+    
+    \br 📃1500 ta kompaniya ishtirok etgan tadqiqotda tadqiqotchilar ish unumdorligining eng sezilarli yaxshilanishi odamlar va mashinalar birgalikda ishlaganda sodir bo'lganligini aniqladilar.
+    
+    \br Tadqiqot Manbasi: https://hbr.org/2018/07/collaborative-intelligence-humans-and-ai-are-joining-forces
     `,
   },
   {
     id: 4,
-    img: img2,
-    type: 'EVENT',
-    date: 'Dec 12, 2021',
-    title: 'Tech summit 2021 highlights',
-    description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    `,
-  },
-  {
-    id: 5,
     img: img1,
-    type: 'NEWS',
-    date: 'Jan 5, 2022',
-    title: 'Breakthrough in quantum computing',
+    type: 'Maqola',
+    date: 'July 5, 2024',
+    title: 'Zamon AI Nima?',
     description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    `,
-  },
-  {
-    id: 6,
-    img: img3,
-    type: 'BLOG',
-    date: 'Feb 18, 2022',
-    title: 'The future of augmented reality',
-    description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    `,
-  },
-  {
-    id: 7,
-    img: img3,
-    type: 'PODCAST',
-    date: 'Sep 14, 2021',
-    title: 'Setup your own podcast',
-    description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    `,
-  },
-  {
-    id: 8,
-    img: img2,
-    type: 'ARTICLE',
-    date: 'Oct 21, 2021',
-    title: 'The impact of AI on modern society',
-    description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    `,
-  },
-  {
-    id: 9,
-    img: img1,
-    type: 'VIDEO',
-    date: 'Nov 30, 2021',
-    title: 'Introduction to machine learning algorithms',
-    description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    `,
-  },
-  {
-    id: 10,
-    img: img2,
-    type: 'EVENT',
-    date: 'Dec 12, 2021',
-    title: 'Tech summit 2021 highlights',
-    description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    `,
-  },
-  {
-    id: 11,
-    img: img1,
-    type: 'NEWS',
-    date: 'Jan 5, 2022',
-    title: 'Breakthrough in quantum computing',
-    description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    `,
-  },
-  {
-    id: 12,
-    img: img3,
-    type: 'BLOG',
-    date: 'Feb 18, 2022',
-    title: 'The future of augmented reality',
-    description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    `,
-  },
-  {
-    id: 13,
-    img: img3,
-    type: 'PODCAST',
-    date: 'Sep 14, 2021',
-    title: 'Setup your own podcast',
-    description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    `,
-  },
-  {
-    id: 14,
-    img: img2,
-    type: 'ARTICLE',
-    date: 'Oct 21, 2021',
-    title: 'The impact of AI on modern society',
-    description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    `,
-  },
-  {
-    id: 15,
-    img: img1,
-    type: 'VIDEO',
-    date: 'Nov 30, 2021',
-    title: 'Introduction to machine learning algorithms',
-    description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    `,
-  },
-  {
-    id: 16,
-    img: img2,
-    type: 'EVENT',
-    date: 'Dec 12, 2021',
-    title: 'Tech summit 2021 highlights',
-    description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    `,
-  },
-  {
-    id: 17,
-    img: img1,
-    type: 'NEWS',
-    date: 'Jan 5, 2022',
-    title: 'Breakthrough in quantum computing',
-    description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    `,
-  },
-  {
-    id: 18,
-    img: img3,
-    type: 'BLOG',
-    date: 'Feb 18, 2022',
-    title: 'The future of augmented reality',
-    description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    `,
-  },
-  {
-    id: 19,
-    img: img3,
-    type: 'PODCAST',
-    date: 'Sep 14, 2021',
-    title: 'Setup your own podcast',
-    description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    `,
-  },
-  {
-    id: 20,
-    img: img2,
-    type: 'ARTICLE',
-    date: 'Oct 21, 2021',
-    title: 'The impact of AI on modern society',
-    description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    `,
-  },
-  {
-    id: 21,
-    img: img1,
-    type: 'VIDEO',
-    date: 'Nov 30, 2021',
-    title: 'Introduction to machine learning algorithms',
-    description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    `,
-  },
-  {
-    id: 22,
-    img: img2,
-    type: 'EVENT',
-    date: 'Dec 12, 2021',
-    title: 'Tech summit 2021 highlights',
-    description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    `,
-  },
-  {
-    id: 23,
-    img: img1,
-    type: 'NEWS',
-    date: 'Jan 5, 2022',
-    title: 'Breakthrough in quantum computing',
-    description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    `,
-  },
-  {
-    id: 24,
-    img: img3,
-    type: 'BLOG',
-    date: 'Feb 18, 2022',
-    title: 'The future of augmented reality',
-    description: `
-    The concept of AI is not new. It dates back to ancient times when philosophers and mathematicians pondered the possibility of creating intelligent machines. However, the formal inception of AI as a field of study is traced to 1956, during the Dartmouth Conference organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon. This event marked the beginning of AI research, aiming to construct machines that could perform tasks requiring human intelligence.
-
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
-    \br Early AI research focused on symbolic AI or "good old-fashioned AI" (GOFAI), which involved programming explicit rules and logic. This approach saw some success in areas like game playing and theorem proving but struggled with real-world complexity and ambiguity. The limitations of symbolic AI led to the exploration of machine learning (ML) in the 1980s, a subfield of AI that emphasizes the ability of machines to learn from data rather than being explicitly programmed.
+🔎  ZamonAI loyhasi o'zi nima? Loyiha nomidan bilishingiz mumkinki bu loyiha asosan sun'iy intellekt haqida. Bilamizki hozirda ko'pchilik insonlar sun'iy intellekt degandan faqatgina ChatGPT  yoki Robotlarni  tushinishadi, lekin bu aslida nima va hayotda uning qanday joriy etish yo'llari bor?   Biz ushbu loyiha orqali bu savolga javob topishingiz mumkin!
+   
+    \br 🎯 Ko'plab maktablarda katta sinf va hattoki universitet yillarigacha bu bilimlar berilmaydi va bizning maqsadimiz shuki O'zbekistondagi dasturlashga qiziqqan lekin ingliz tili yoki rus tilini bilmasligi tufayli o'zbek tilida dasturlashga va Sun'iy Intellektga oid kerak ma'lumotlarni topolmasdan yurgan yoshlarga saviyali bilimlarni ulashishdir. Ushbu loyiha nafaqat sun'iy intellekt, balki dasturlashga oid bilimlarni ham o'z ichiga qamrab oladi.
+   
+    \br 🌐 Siz ushbu loyiha orqali dasturlash haqidagi maqolalarni tarjimasi va  kuchli dasturchilar bilan Telegram yoki Zoom orqali bo'lib o'tadigan jonli suhbatimizga qo'shilish imkoniyatiga ega bo'lingiz mumkin.
     `,
   },
 ];
