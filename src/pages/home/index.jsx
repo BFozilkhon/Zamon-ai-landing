@@ -6,6 +6,7 @@ import FAQ from '../../components/FAQ';
 import Contact from '../../components/Contact';
 import Hackathon from '../../components/Hackathon';
 import Purpose from '../../components/Purpose';
+import Partner from '../../components/Partner';
 
 import './style.css';
 
@@ -15,6 +16,7 @@ const Home = () => {
       <Opener />
       <Purpose />
       <Hackathon />
+      <Partner />
       <Posts />
       <Contact />
       <Team />

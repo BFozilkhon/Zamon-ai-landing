@@ -3,6 +3,7 @@ import img2 from '../images/team2.jpg';
 import img3 from '../images/team3.jpg';
 import img4 from '../images/team4.jpg';
 import img5 from '../images/team5.jpg';
+import img6 from '../images/team6.jpg';
 
 const teamData = [
   {
@@ -12,6 +13,14 @@ const teamData = [
     surname: 'Mukhitdinov',
     role: 'Founder',
     telegram: '@nmukhitdinov',
+  },
+  {
+    id: 10,
+    img: img6,
+    name: 'Ozoda',
+    surname: 'Muminova',
+    role: 'Media Partner',
+    telegram: '@ozodakhonm',
   },
   {
     id: 2,
