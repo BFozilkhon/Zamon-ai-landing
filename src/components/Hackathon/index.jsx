@@ -35,7 +35,7 @@ const Hackathon = () => {
         </p>
 
         <a
-          href='https://docs.google.com/forms/d/1T6Ef1fnxQU72cpc0rozwlh4SWrpenu7G0Fe8LHohTqY/viewform?edit_requested=true'
+          href='https://docs.google.com/forms/d/1FX37kPPM2p3rHoy8F7vi4CDBek0PYLeYbbZUNj3jK-w/viewform?edit_requested=true'
           target='_blank'
         >
           <button className='hack-btn'>
