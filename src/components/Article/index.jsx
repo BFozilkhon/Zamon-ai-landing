@@ -81,10 +81,7 @@ const Article = ({ article, isFeatured = false }) => {
       
       <div className="article-content">
         <div className="article-meta">
-          <span className="article-date">
-            <BiCalendar className="article-icon" />
-            {formatDate(article.date)}
-          </span>
+    
           {article.author && (
             <span className="article-author">
               <BiUser className="article-icon" />

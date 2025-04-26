@@ -15,8 +15,8 @@
 
 .posts-page-title {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--white-txt-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 .posts-page-description {
@@ -166,17 +166,4 @@
     padding: 10px 30px;
     font-size: 16px;
   }
-}
-
-.dev-mode-notice {
-  background-color: #ffeb3b;
-  color: #333;
-  padding: 10px 15px;
-  border-radius: 4px;
-  margin-top: 10px;
-  font-size: 0.9rem;
-  text-align: center;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }

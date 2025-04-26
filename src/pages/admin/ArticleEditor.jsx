@@ -257,9 +257,12 @@ const ArticleEditor = () => {
             value={article.content}
             onChange={handleChange}
             className="admin-textarea"
-            rows="10"
+            rows="15"
             required
           />
+          <small className="form-help-text">
+            Use a blank line between paragraphs to create spacing. Your paragraph breaks will be preserved when displayed.
+          </small>
         </div>
 
         <div className="form-row">

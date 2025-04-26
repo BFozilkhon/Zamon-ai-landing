@@ -125,6 +125,7 @@
   line-height: 1.8;
   margin-bottom: 1.5rem;
   color: #163300;
+  white-space: pre-line;
 }
 
 .article-detail-actions {

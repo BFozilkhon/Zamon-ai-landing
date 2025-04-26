@@ -200,12 +200,24 @@ const ArticleDetail = ({ article }) => {
       </div>
       
       <div className="article-detail-content">
-        {/* Render the article content, handling the \br tags */}
-        {article?.description?.split('\\br').map((paragraph, index) => (
-          <p key={index} className="article-detail-paragraph">
-            {paragraph.trim()}
-          </p>
-        ))}
+        {/* Render the article content, handling both \br tags and regular newlines */}
+        {article.content ? (
+          article.content.split(/\\br|\n\n+/).map((paragraph, index) => (
+            paragraph.trim() && (
+              <p key={index} className="article-detail-paragraph">
+                {paragraph.trim()}
+              </p>
+            )
+          ))
+        ) : (
+          article?.description?.split(/\\br|\n\n+/).map((paragraph, index) => (
+            paragraph.trim() && (
+              <p key={index} className="article-detail-paragraph">
+                {paragraph.trim()}
+              </p>
+            )
+          ))
+        )}
       </div>
       
       <div className="article-detail-actions">
