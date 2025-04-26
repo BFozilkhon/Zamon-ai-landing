@@ -35,7 +35,7 @@
 }
 
 .footer-links a:hover {
-  color: var(--secondary-color);
+  color: #9FE870;
 }
 
 .footer-social {
@@ -51,7 +51,7 @@
 }
 
 .footer-social a:hover {
-  color: var(--secondary-color);
+  color: #9FE870  ;
 }
 
 .footer-message {

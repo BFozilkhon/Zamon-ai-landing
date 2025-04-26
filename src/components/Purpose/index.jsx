@@ -8,53 +8,34 @@ const Purpose = () => {
     <div className='purpose-container'>
       <div className='purpose-wrapper'>
         <h1 data-aos='fade-up' className='purpose-header'>
-          Mission <span>& Vision</span>
+           <span>Maqsad & Kelajak</span>
         </h1>
         <p data-aos='fade-up' className='purpose-descr'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam,
           quas!
         </p>
         <div data-aos='fade-up' className='purpose-box'>
-          <div className='purpose-card'>
-            <div className='purpose-circle'>
-              <FaBrain className='purpose-icon' />
-            </div>
-            <h3 className='purpose-card-title'>Our Mission</h3>
-            <i className='purpose-card-descr'>
-              Universal understanding of AI is essential. To create fair and
-              unbiased AI, we must increase diversity and representation in the
-              field.
-            </i>
-          </div>
+          
           <div className='purpose-card'>
             <div className='purpose-circle'>
               <FaUsers className='purpose-icon' />
             </div>
-            <h3 className='purpose-card-title'>Our Vision</h3>
+            <h3 className='purpose-card-title'>Bizning Maqsadimiz</h3>
             <i className='purpose-card-descr'>
-              Empower diverse students in Uzbekistan to explore AI and computer
-              science, fostering diversity from middle and high school.
+            Bugungi texnologiyalar dunyosida AI - bu oddiy so‘z emas. Bu - kelajak. Ammo ko‘pchilik hali ham bu sohani chuqur tushunmaydi. Biz Zamon AI orqali shu muammoni hal qilishga bel bog'ladik. 
+Zamon AI - bu O‘zbekistonda AI haqida eng yirik platformani yaratish yo‘lida boshlangan proyek
             </i>
           </div>
-          <div className='purpose-card'>
-            <div className='purpose-circle'>
-              <FaLaptopCode className='purpose-icon' />
-            </div>
-            <h3 className='purpose-card-title'>Our Goal</h3>
-            <i className='purpose-card-descr'>
-              Address the gap between theoretical and practical knowledge in
-              Uzbekistan by conducting hackathons and master classes, fostering
-              practical skills and teamwork.
-            </i>
-          </div>
+         
           <div className='purpose-card'>
             <div className='purpose-circle'>
               <FaHandsHelping className='purpose-icon' />
             </div>
-            <h3 className='purpose-card-title'>Our Impact</h3>
+            <h3 className='purpose-card-title'>Bizning Ta'limimiz</h3>
             <i className='purpose-card-descr'>
-              ZamonAI is free and open to all students, aiming to build a strong
-              computer science foundation for a better future.
+            • O‘zbek tilida AI bo‘yicha kuchli, zamonaviy, tushunarli kontentlar yaratish
+• YouTube, Instagram, Telegram, va veb-platformamiz orqali millionlab yoshlar uchun eshik ochish
+• Sun’iy intellekt, AI marketing, avtomatlashtirish, e-commerce, freelancing, dizayn, real estate, startup kabi zamonaviy sohalarda kurslar, maqolalar, podkastlar va video darsliklar
             </i>
           </div>
         </div>

@@ -10,11 +10,11 @@
 }
 
 :root {
-  --primary-color: #020a18;
-  --secondary-color: rgb(255, 85, 0);
-  --primary-txt-color: #3a68b8;
-  --white-txt-color: #ffffff;
-  --card-color: #101724;
+  --primary-color: #fff;
+  --secondary-color: #163300;
+  --primary-txt-color: #03444a;
+  --white-txt-color: #fff;
+  --card-color: #153400;
 }
 
 body {

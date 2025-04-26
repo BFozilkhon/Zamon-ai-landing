@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
-import img from '../../assets/images/hackathon3.jpg';
+import axios from 'axios';
+import img from '../../assets/images/contact.png';
 import './style.css';
 
 const Contact = () => {
@@ -12,6 +12,8 @@ const Contact = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,26 +38,41 @@ const Contact = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const formErrors = validateForm();
+    
     if (Object.keys(formErrors).length === 0) {
-      emailjs
-        .send(
-          'service_wlkxbt9',
-          'template_l2dgs5g',
-          formData,
-          'user_pywPsnKY1q8czlk9MyD56'
-        )
-        .then(
-          (result) => {
-            alert('Message sent successfully!');
-            window.location.reload();
-          },
-          (error) => {
-            alert('An error occurred, please try again.');
+      setIsSubmitting(true);
+      setSubmitStatus(null);
+      
+      try {
+        // Replace this URL with your deployed Google Apps Script Web App URL
+        const scriptURL = 'https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID_HERE/exec';
+        
+        const response = await axios.post(scriptURL, null, {
+          params: {
+            name: formData.name,
+            phone: formData.phone,
+            telegram: formData.telegram,
+            message: formData.message,
+            timestamp: new Date().toISOString()
           }
-        );
+        });
+        
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          phone: '+998',
+          telegram: '',
+          message: '',
+        });
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        setSubmitStatus('error');
+      } finally {
+        setIsSubmitting(false);
+      }
     } else {
       setErrors(formErrors);
     }
@@ -64,7 +81,7 @@ const Contact = () => {
   return (
     <div id='contact' className='contact-container'>
       <h1 data-aos='fade-up' className='contact-header'>
-        ZamonAI <span> Contact</span>
+         <span>ZamonAI Contact</span>
       </h1>
       <div className='contact-wrapper'>
         <img
@@ -75,6 +92,16 @@ const Contact = () => {
         />
         <div data-aos='fade-up-left' className='contact-box2'>
           <h3 className='contact-title'>Send your question</h3>
+          {submitStatus === 'success' && (
+            <div className="success-message">
+              Your message has been sent successfully! We'll contact you soon.
+            </div>
+          )}
+          {submitStatus === 'error' && (
+            <div className="error-message">
+              There was an error sending your message. Please try again later.
+            </div>
+          )}
           <form onSubmit={handleSubmit}>
             <input
               className='contact-input'
@@ -114,8 +141,12 @@ const Contact = () => {
               onChange={handleChange}
             ></textarea>
             {errors.message && <span className='error'>{errors.message}</span>}
-            <button className='contact-btn' type='submit'>
-              Send Message
+            <button 
+              className='contact-btn' 
+              type='submit'
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>

@@ -1,6 +1,7 @@
 .nav-container {
   width: 100%;
   padding: 20px 40px;
+  border-bottom: 2px solid #16330014;
   background: var(--primary-color);
 }
 
@@ -38,12 +39,12 @@
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
-  color: var(--white-txt-color);
+  color: var(--secondary-color);
   transition: 0.3s all;
 }
 
 .nav-item:hover {
-  color: var(--secondary-color);
+  color: #9FE870;
 }
 
 .nav-btn {

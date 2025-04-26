@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Zamon AI Landing Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project uses React for the frontend and Supabase for the backend, providing a complete solution for content management and user authentication.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- User authentication
+- Admin dashboard for content management
+- Article/blog system with CRUD operations
+- Media management
 
-### `npm start`
+## Supabase Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Create a new Supabase project at [supabase.com](https://supabase.com)
+2. Create the following tables in your Supabase database:
+   - `profiles` - Stores user profile information
+   - `articles` - Stores article content
+   - `article_likes` - Tracks article likes
+   - `comments` - Stores article comments
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Create storage buckets:
+   - `media` for article images
+   - `avatars` for user avatars
 
-### `npm test`
+4. Get your Supabase URL and anon key from the API settings
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Setup
 
-### `npm run build`
+1. Clone the repository
+   ```bash
+   git clone https://github.com/yourusername/zamon-ai-landing.git
+   cd zamon-ai-landing
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Create a `.env` file in the root directory with your Supabase credentials
+   ```
+   REACT_APP_SUPABASE_URL=your-supabase-url
+   REACT_APP_SUPABASE_ANON_KEY=your-supabase-anon-key
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Start the development server
+   ```bash
+   npm start
+   ```
 
-### `npm run eject`
+## Services
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The project contains the following service files to interact with Supabase:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `src/services/supabase.js` - Supabase client configuration
+- `src/services/authService.js` - Authentication functions
+- `src/services/articleService.js` - Article management functions

@@ -35,8 +35,8 @@
 .purpose-box {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 120px;
 }
 
 .purpose-card {
@@ -53,11 +53,6 @@
 .purpose-card::before {
   content: '';
   position: absolute;
-  background: radial-gradient(
-    circle,
-    rgba(58, 104, 184, 0.2) 0%,
-    rgba(16, 23, 36, 0.95) 60%
-  );
   transition: 0.5s all;
   z-index: -1;
   border-radius: 50%;

@@ -28,10 +28,6 @@
     -->
     <title>Zamon AI</title>
   </head>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
@@ -45,5 +41,21 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    
+    <!-- AOS script moved here to ensure DOM is loaded before initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Initialize AOS immediately when script loads
+      AOS.init({
+        duration: 600,
+        once: true,
+        offset: -100, // Negative offset to trigger animations before elements enter viewport
+        delay: 0,
+        disable: 'mobile',
+        startEvent: 'DOMContentLoaded',
+        mirror: false,
+        anchorPlacement: 'top-bottom'
+      });
+    </script>
   </body>
 </html>

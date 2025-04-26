@@ -53,7 +53,7 @@ const Navbar = () => {
               to='/#home'
               className='nav-item'
             >
-              Home
+              Asosiy
             </Link>
             {/* <a href='#' className='nav-item'>
               Hackathon
@@ -66,9 +66,9 @@ const Navbar = () => {
               to='/#news'
               className='nav-item'
             >
-              News
+              Yangiliklar
             </Link>
-            <Link
+            {/* <Link
               onClick={() => {
                 setIsOpen(!isOpen);
                 setLocationName('team');
@@ -76,8 +76,8 @@ const Navbar = () => {
               to='/#team'
               className='nav-item'
             >
-              Team
-            </Link>
+              Jamoa
+            </Link> */}
             <Link
               onClick={() => {
                 setIsOpen(!isOpen);
@@ -96,7 +96,7 @@ const Navbar = () => {
               to='/#contact'
               className='nav-item contact'
             >
-              Contact
+              Aloqa
             </Link>
           </div>
         </div>

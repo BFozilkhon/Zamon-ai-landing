@@ -42,7 +42,7 @@ const Team = () => {
   return (
     <div id='team' className='team-container'>
       <h1 data-aos='fade-up' className='team-header'>
-        Our <span>The BEST</span> Team
+         <span> Our The BEST  Team</span>
       </h1>
       <p data-aos='fade-up' className='team-descr'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt soluta ut,

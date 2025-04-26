@@ -13,17 +13,17 @@
 
 .post-params-box2 {
   width: 300px;
-  background: var(--card-color);
+  background: var(--secondary-color);
   height: 550px;
 }
 
 .post-params-title {
-  color: #ffffff;
+  color: var(--secondary-color);
   margin: 20px 0px;
 }
 
 .post-params-descr {
-  color: #ffffff;
+  color: var(--secondary-color);
   line-height: 28px;
 }
 
@@ -42,7 +42,7 @@
 .post-params-prompt {
   padding: 10px 20px;
   background-color: var(--card-color);
-  color: white;
+  color: var(--secondary-color);
 }
 
 @media (max-width: 920px) {
@@ -76,4 +76,41 @@
     padding: 8px 15px;
     font-size: 14px;
   }
+}
+
+/* Post Params Page Styles */
+.post-params-page {
+  min-height: 100vh;
+  padding: 100px;
+  background-color: --var(--primary-color);
+}
+
+.article-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 1.2rem;
+  color: rgba(34, 61, 13, 0.8);
+}
+
+.article-not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+}
+
+.article-not-found h2 {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.article-not-found p {
+  color: #03444a;
+  max-width: 600px;
 }

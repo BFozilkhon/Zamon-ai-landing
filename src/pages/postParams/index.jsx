@@ -1,39 +1,76 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import postsData from '../../assets/fake_data/posts_data';
-
+import { useParams, useNavigate } from 'react-router-dom';
+import ArticleDetail from '../../components/ArticleDetail';
+import articleService from '../../services/articleService';
 import './style.css';
 
 const PostParams = () => {
-  const [data, setData] = useState({});
+  const [article, setArticle] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const filteredData = postsData.filter((value) => value.id === parseInt(id));
-    console.log(filteredData, 'filter');
-    setData(filteredData[0]);
-  }, []);
+    const fetchArticle = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        
+        // Fetch article from Supabase
+        const articleData = await articleService.getArticleById(id);
+        console.log('Article fetched from Supabase:', articleData);
+        
+        // Check if article exists and is published
+        if (!articleData) {
+          setError('Article not found');
+          setLoading(false);
+          return;
+        }
+        
+        if (articleData.status !== 'published') {
+          console.log('Article is not published, redirecting to posts page');
+          navigate('/posts');
+          return;
+        }
+        
+        // Transform data to match the expected format for ArticleDetail
+        const formattedArticle = {
+          ...articleData,
+          author: articleData.author || 'Admin',
+          comments: articleData.comments || [],
+          date: articleData.createdAt,
+          type: articleData.category,
+          description: articleData.content,
+          img: articleData.featuredImage,
+          featuredImage: articleData.featuredImage
+        };
+        
+        setArticle(formattedArticle);
+        setLoading(false);
+      } catch (err) {
+        console.error("Error fetching article from Supabase:", err);
+        setError('Failed to load article. Please try again later.');
+        setLoading(false);
+      }
+    };
+    
+    fetchArticle();
+  }, [id, navigate]);
+
+  if (loading) {
+    return <div className="article-loading">Loading article...</div>;
+  }
+
+  if (error || !article) {
+    return <div className="article-not-found">
+      {error || 'Article not found'}
+    </div>;
+  }
 
   return (
-    <div className='post-params-container'>
-      <div className='post-params-box1'>
-        <img className='post-params-img' src={data?.img} alt='img' />
-        <div className='post-params-flex'>
-          <p className='post-params-prompt'>{data?.type}</p>
-          <p className='post-params-prompt'>{data?.date}</p>
-        </div>
-        <h1 className='post-params-title'>{data?.title}</h1>
-        {data?.description?.split('\br').map((paragraph, index) => (
-          <>
-            {console.log(paragraph, 'pp')}
-            <i key={index} className='post-params-descr'>
-              {paragraph}
-            </i>
-            <br />
-            <br />
-          </>
-        ))}
-      </div>
+    <div className="post-params-page">
+      <ArticleDetail article={article} />
     </div>
   );
 };
