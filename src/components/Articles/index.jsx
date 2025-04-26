@@ -3,7 +3,54 @@ import { useLocation } from 'react-router-dom';
 import Article from '../Article';
 import { BiSearch, BiFilterAlt } from 'react-icons/bi';
 import articleService from '../../services/articleService';
+import { isDevMode } from '../../services/supabase';
 import './style.css';
+
+// Mock data for development mode
+const MOCK_ARTICLES = [
+  {
+    id: 'mock-1',
+    title: 'Getting Started with Zamon AI',
+    excerpt: 'Learn how to get started with our AI platform quickly and easily.',
+    content: 'This is a sample article content that would be much longer in a real article.',
+    featuredImage: 'https://via.placeholder.com/800x500?text=Zamon+AI+Article+1',
+    category: 'Tutorials',
+    tags: ['beginner', 'getting-started'],
+    status: 'published',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+    author: 'Admin User',
+    slug: 'getting-started-with-zamon-ai'
+  },
+  {
+    id: 'mock-2',
+    title: 'Advanced AI Techniques',
+    excerpt: 'Discover advanced techniques to maximize your AI implementation.',
+    content: 'Advanced content would go here with detailed explanations and examples.',
+    featuredImage: 'https://via.placeholder.com/800x500?text=Zamon+AI+Article+2',
+    category: 'Advanced',
+    tags: ['advanced', 'techniques'],
+    status: 'published',
+    createdAt: new Date(Date.now() - 86400000).toISOString(), // 1 day ago
+    updatedAt: new Date(Date.now() - 86400000).toISOString(),
+    author: 'AI Expert',
+    slug: 'advanced-ai-techniques'
+  },
+  {
+    id: 'mock-3',
+    title: 'AI Ethics and Best Practices',
+    excerpt: 'Understanding the ethical considerations of implementing AI.',
+    content: 'Ethics content discussing responsible AI implementation and best practices.',
+    featuredImage: 'https://via.placeholder.com/800x500?text=Zamon+AI+Article+3',
+    category: 'Ethics',
+    tags: ['ethics', 'best-practices'],
+    status: 'published',
+    createdAt: new Date(Date.now() - 172800000).toISOString(), // 2 days ago
+    updatedAt: new Date(Date.now() - 172800000).toISOString(),
+    author: 'Ethics Specialist',
+    slug: 'ai-ethics-and-best-practices'
+  }
+];
 
 const Articles = ({ limit = 0, featured = false }) => {
   const location = useLocation();
@@ -26,12 +73,30 @@ const Articles = ({ limit = 0, featured = false }) => {
   const [showFilters, setShowFilters] = useState(false);
   const articlesPerPage = 6;
 
-  // Fetch articles from Supabase
+  // Fetch articles from Supabase or use mock data in dev mode
   useEffect(() => {
     const fetchArticles = async () => {
       setLoading(true);
       
       try {
+        // If in development mode, use mock data
+        if (isDevMode) {
+          console.log('Using mock article data in development mode');
+          // Wait a bit to simulate loading
+          await new Promise(resolve => setTimeout(resolve, 300));
+          
+          setArticles(MOCK_ARTICLES);
+          
+          // Extract categories and tags from mock data
+          const allCategories = [...new Set(MOCK_ARTICLES.map(article => article.category).filter(Boolean))];
+          const allTags = [...new Set(MOCK_ARTICLES.flatMap(article => article.tags || []))];
+          
+          setCategories(allCategories);
+          setTags(allTags);
+          setLoading(false);
+          return;
+        }
+        
         // Get articles from Supabase
         const result = await articleService.getArticles({
           status: 'published'  // Only show published articles
