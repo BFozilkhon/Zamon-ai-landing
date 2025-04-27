@@ -42,7 +42,7 @@
   flex-wrap: wrap;
 }
 
-.posts-btn {
+.posts-container .posts-btn {
   border: none;
   outline: none;
   background: var(--secondary-color);
@@ -53,40 +53,25 @@
   text-decoration: none;
   color: var(--white-txt-color);
   cursor: pointer;
-  transform: scale(1);
   position: relative;
   overflow: hidden;
   margin-top: 60px;
+  transition: all 0.4s ease;
+  /* Reset any possible ::before and ::after styles */
+  z-index: 1;
 }
 
-.posts-btn::before,
-.posts-btn::after {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 0;
-  background-color: #ae310b;
-  content: '';
-  transition: width 1s;
-  z-index: -1;
+/* Remove any possible ::before and ::after effects */
+.posts-container .posts-btn::before,
+.posts-container .posts-btn::after {
+  display: none !important;
 }
 
-.posts-btn::before {
-  left: 0;
+.posts-container .posts-btn:hover {
+  background-color: #9FE870 !important;
+  color: var(--secondary-color) !important;
 }
 
-.posts-btn::after {
-  right: 0;
-}
-
-.posts-btn:hover::before,
-.posts-btn:hover::after {
-  width: 100%;
-}
-
-.posts-btn:active {
-  transform: scale(0.96);
-}
 
 @media (max-width: 1300px) {
   .posts-container {
@@ -103,6 +88,12 @@
 @media (max-width: 1020px) {
   .posts-cards {
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 920px) {
+  .detail1 {
+    display: none;
   }
 }
 

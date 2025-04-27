@@ -11,7 +11,7 @@ const Opener = () => {
             O'zbekistondagi Sun'iy Intellekt va Tehnologiyalar platformasi
           </h3>
           <h1 className='opener-title'>
-      Sun'iy Intellekt va Tehnologiyalar
+      Sun'iy Intellekt va Texnologiyalar
           </h1>
           <p className='opener-descr'>
           AI va zamonaviy kasblar bo‘yicha eng yirik o‘zbek tilidagi platforma!

@@ -90,37 +90,15 @@
   cursor: pointer;
   transform: scale(1);
   position: relative;
+  transition: all 0.4s ease;
   overflow: hidden;
   margin-top: 15px;
 }
 
-.contact-btn:active {
-  transform: scale(0.96);
-}
-
-.contact-btn::before,
-.contact-btn::after {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 0;
-  background-color: #ae310b;
-  content: '';
-  transition: width 1s;
-  z-index: -1;
-}
-
-.contact-btn::before {
-  left: 0;
-}
-
-.contact-btn::after {
-  right: 0;
-}
-
-.contact-btn:hover::before,
-.contact-btn:hover::after {
-  width: 100%;
+.contact-btn:hover {
+  background-color: #9FE870;
+  color: var(--secondary-color);
+  transition: all 0.4s ease;
 }
 
 .error {

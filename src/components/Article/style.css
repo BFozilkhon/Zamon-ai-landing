@@ -4,18 +4,20 @@
   flex-direction: column;
   background-color: #132904;
   border-radius: 8px;
-  padding: 10px;
+  padding: 5px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(21, 52, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all ease, box-shadow 0.3s ease;
   margin-bottom: 2rem;
   position: relative;
   height: 100%;
 }
 
 .article-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
   box-shadow: 0 8px 18px rgba(21, 52, 0, 0.15);
+  padding: 10px;
+  transition: all 0.4s ease;
 }
 
 .article-card.featured {
